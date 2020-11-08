@@ -11,6 +11,19 @@
 
 <body>
     <h1>Login</h1>
+    <!-- Success message -->
+    <ul>
+      <% if(messages.success_msg) { %>
+      <li><%= messages.success_msg %></li>
+      <% } %>
+    </ul>
+
+    <!-- Signin error message from passport -->
+    <ul>
+        <% if (messages.error) { %>
+        <li><%= messages.error %></li>
+        <% } %>
+      </ul>
 
     <form action="/users/login" method="POST">
 
